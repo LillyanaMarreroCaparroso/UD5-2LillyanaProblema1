@@ -1,7 +1,7 @@
 import java.util.Collections;
 import java.util.Iterator;
 
-public class SuperList extends ListManager {
+public class SuperList<T> extends ListManager {
 
     @Override //añade un elemento a final de la lista
     public void addElement(Object element) {
@@ -10,16 +10,16 @@ public class SuperList extends ListManager {
 
     @Override
     public Object removeElement(int position) {
-        Object elementRemove = list.remove(position);
+        Object elementRemove = list.remove(position-1);
         return elementRemove;
     }
 
     @Override
     public void showElements() {
-        Iterator<String> it = list.iterator();
+        Iterator<T> it = list.iterator();
 
         while(it.hasNext()) {
-            String value = it.next();
+            T value = it.next();
             System.out.println(value);
             System.out.println(" ");
         }

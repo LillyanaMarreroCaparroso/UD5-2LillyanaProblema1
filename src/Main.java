@@ -14,8 +14,6 @@ public class Main {
         intList.showElements();
         intList.showReversedElements();
 
-
-
     }
 
 }

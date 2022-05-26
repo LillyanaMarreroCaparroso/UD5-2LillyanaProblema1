@@ -15,7 +15,6 @@ public abstract class ListManager<T> {
 
         for ( T value: list ) {
             output += value.toString() + " | ";
-
         }
         return output;
     }
